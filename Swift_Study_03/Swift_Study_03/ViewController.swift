@@ -16,5 +16,13 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func btnMove(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "main", bundle: Bundle.main)
+        let uvc = self.storyboard!.instantiateInitialViewController(withIdentifier: "Second VC")
+        
+        uvc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+        
+        self.present(uvc, animated: true)
+    }
 }
 
