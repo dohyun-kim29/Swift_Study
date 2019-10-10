@@ -16,19 +16,8 @@ class ViewController: UIViewController {
     }
 
 
-    @IBAction func moveByNavi(_ sender: Any) {
-        let storyboard: UIStoryboard = UIStoryboard(name: "main", bundle: nil)
-        let nextView = storyboard.instantiateInitialViewController()
-        self.present(nextView!, animated: true, completion: nil)
-        
+   
         
     }
-    
-    @IBAction func movePresent(_ sender: Any) {
-        
-        let storyboard: UIStoryboard = UIStoryboard(name: "main", bundle: nil)
-        let nextView = storyboard.instantiateInitialViewController()
-        self.present(nextView!, animated: true, completion: nil)
-    }
-}
+
 

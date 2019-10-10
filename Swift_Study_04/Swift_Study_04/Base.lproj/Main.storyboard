@@ -7,35 +7,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
-        <scene sceneID="VD3-Bp-GQo">
-            <objects>
-                <tableViewController id="27U-tP-WrE" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Sm7-KI-LnV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="SnL-Xv-xwe">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SnL-Xv-xwe" id="dPJ-6m-bkR">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="27U-tP-WrE" id="01x-JH-20P"/>
-                            <outlet property="delegate" destination="27U-tP-WrE" id="75c-2v-ZpL"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="d4L-yP-dsq"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v1a-XH-Axh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-580" y="137"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="jj1-28-zZL">
             <objects>
@@ -44,9 +15,6 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="27U-tP-WrE" kind="relationship" relationship="rootViewController" id="Ks6-1p-CFF"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hy2-Mf-9tY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -72,7 +40,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="movePresent"/>
                                 <connections>
-                                    <action selector="movePresent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J7p-VD-Mu0"/>
+                                    <segue destination="2Nn-pC-9xM" kind="show" id="Z9L-Dy-Mfa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -82,7 +50,7 @@
                     <navigationItem key="navigationItem" title="화면 전환" id="b2A-1s-hz1">
                         <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="6Iu-zT-2r5">
                             <connections>
-                                <action selector="moveByNavi:" destination="BYZ-38-t0r" id="moj-Re-MbX"/>
+                                <segue destination="2Nn-pC-9xM" kind="show" id="yOY-be-0nq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -126,6 +94,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="W1O-Ta-W0l"/>
                     </view>
+                    <navigationItem key="navigationItem" id="b6E-jv-LHK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I19-gf-Ni3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -150,4 +119,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="yOY-be-0nq"/>
+    </inferredMetricsTieBreakers>
 </document>
