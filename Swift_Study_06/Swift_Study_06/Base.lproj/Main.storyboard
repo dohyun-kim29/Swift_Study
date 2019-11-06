@@ -35,12 +35,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="21j-io-E53" kind="presentation" identifier="ManualWind" modalTransitionStyle="partialCurl" id="YDF-7z-0yy"/>
+                        <segue destination="21j-io-E53" kind="presentation" identifier="ManualWind" id="YDF-7z-0yy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-57" y="138"/>
+            <point key="canvasLocation" x="-57.971014492753625" y="137.94642857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2Pj-VM-lPa">

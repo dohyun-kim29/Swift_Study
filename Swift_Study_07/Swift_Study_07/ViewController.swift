@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  Swift_Study_06
+//  Swift_Study_07
 //
-//  Created by DohyunKim on 10/22/2019.
+//  Created by DohyunKim on 06/11/2019.
 //  Copyright © 2019 DohyunKim. All rights reserved.
 //
 
@@ -15,9 +15,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func wind(_ sender: Any) {
-        self.performSegue(withIdentifier: "ManualWind", sender: self)
-    }
-    
+
 }
 
