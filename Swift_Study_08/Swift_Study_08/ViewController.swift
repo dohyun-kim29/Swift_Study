@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Swift_Study_07
+//  Swift_Study_08
 //
 //  Created by DohyunKim on 06/11/2019.
 //  Copyright © 2019 DohyunKim. All rights reserved.
@@ -15,9 +15,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func unwindToVC(_segue: UIStoryboardSegue) {
+    @IBAction func gotoPage1(_ sender: UIStoryboardSegue) {
         
     }
-    
 }
 
