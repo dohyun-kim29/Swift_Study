@@ -15,6 +15,7 @@
 		47043C762372E13C00A2CBA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47043C742372E13C00A2CBA9 /* LaunchScreen.storyboard */; };
 		47043C812372E13C00A2CBA9 /* Swift_Study_08Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47043C802372E13C00A2CBA9 /* Swift_Study_08Tests.swift */; };
 		47043C8C2372E13C00A2CBA9 /* Swift_Study_08UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47043C8B2372E13C00A2CBA9 /* Swift_Study_08UITests.swift */; };
+		47ACA8922375546D008525BA /* Page2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ACA8912375546D008525BA /* Page2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		47043C872372E13C00A2CBA9 /* Swift_Study_08UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Swift_Study_08UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47043C8B2372E13C00A2CBA9 /* Swift_Study_08UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_Study_08UITests.swift; sourceTree = "<group>"; };
 		47043C8D2372E13C00A2CBA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47ACA8912375546D008525BA /* Page2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				47043C6B2372E13A00A2CBA9 /* SceneDelegate.swift */,
 				47043C6D2372E13A00A2CBA9 /* ViewController.swift */,
 				47043C6F2372E13A00A2CBA9 /* Main.storyboard */,
+				47ACA8912375546D008525BA /* Page2ViewController.swift */,
 				47043C722372E13C00A2CBA9 /* Assets.xcassets */,
 				47043C742372E13C00A2CBA9 /* LaunchScreen.storyboard */,
 				47043C772372E13C00A2CBA9 /* Info.plist */,
@@ -261,6 +264,7 @@
 			files = (
 				47043C6E2372E13A00A2CBA9 /* ViewController.swift in Sources */,
 				47043C6A2372E13A00A2CBA9 /* AppDelegate.swift in Sources */,
+				47ACA8922375546D008525BA /* Page2ViewController.swift in Sources */,
 				47043C6C2372E13A00A2CBA9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
