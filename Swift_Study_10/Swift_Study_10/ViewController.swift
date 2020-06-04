@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
     @IBAction func onSwitch(_ sender: UISwitch) {
         if (sender.isOn == true) {
             self.isUpdateText.text = "갱신함"
@@ -39,5 +39,19 @@ class ViewController: UIViewController {
         self.intervalText.text = "\(value)분 마다"
     }
     
+    
+    
+    @IBAction func onSubmit(_ sender: Any) {
+        
+        guard let rvc = self.storyboard?.instantiateViewController(withIdentifier: "RVC") as? ResultViewController else {
+            return
+        }
+        
+        rvc.paramEmail = self.email.text!
+        rvc.paramUpdate = self.isUpdate.isOn
+        rvc.paramInterval = self.interval.value
+        
+        self.present(rvc, animated: true)
+    }
 }
 
