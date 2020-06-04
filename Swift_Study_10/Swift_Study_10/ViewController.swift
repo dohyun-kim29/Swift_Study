@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         rvc.paramUpdate = self.isUpdate.isOn
         rvc.paramInterval = self.interval.value
         
-        self.present(rvc, animated: true)
+        self.navigationController?.pushViewController(rvc, animated: true)
     }
 }
 
