@@ -53,5 +53,22 @@ class ViewController: UIViewController {
         
         self.navigationController?.pushViewController(rvc, animated: true)
     }
+    
+    @IBAction func onPerformSegue(_ sender: Any) {
+        self.performSegue(withIdentifier: "ManualSubmit", sender: self)
+    }
+    
+    override func prepare (for segue: UIStoryboardSegue, sender: Any? ) {
+        let dest = segue.destination
+        
+        guard let rvc = dest as? ResultViewController else {
+            return
+        }
+        
+        rvc.paramEmail = self.email.text!
+        rvc.paramUpdate = self.isUpdate.isOn
+        rvc.paramInterval = self.interval.value
+        
+    }
 }
 

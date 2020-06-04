@@ -77,7 +77,7 @@
                     <navigationItem key="navigationItem" title="Setting" id="Ieu-g9-cpE">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="Ct2-OE-5WL">
                             <connections>
-                                <action selector="onSubmit:" destination="BYZ-38-t0r" id="nuB-zs-mUf"/>
+                                <action selector="onPerformSegue:" destination="BYZ-38-t0r" id="NEn-XP-1j0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -87,6 +87,7 @@
                         <outlet property="intervalText" destination="Vtq-eN-Wyd" id="5Nn-Qf-Nbj"/>
                         <outlet property="isUpdate" destination="hTO-1R-fqf" id="PC9-Lx-5a1"/>
                         <outlet property="isUpdateText" destination="iBe-2F-yi0" id="eRQ-xF-mZO"/>
+                        <segue destination="xFg-4S-O97" kind="show" identifier="ManualSubmit" id="QiX-jm-mgx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -155,6 +156,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="xXA-kM-GoZ"/>
                     </view>
+                    <navigationItem key="navigationItem" id="2RK-tX-w9o"/>
                     <connections>
                         <outlet property="resultEmail" destination="049-kE-8it" id="mGI-PE-bzg"/>
                         <outlet property="resultInterval" destination="mVa-Zq-7ZG" id="Lst-TX-jwz"/>
