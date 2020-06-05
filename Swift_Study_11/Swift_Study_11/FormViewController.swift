@@ -14,11 +14,12 @@ class FormViewController: UIViewController {
     @IBOutlet weak var interval: UIStepper!
     
     @IBAction func onSubmit(_ sender: Any) {
-        let ad = UIApplication.shared.delegate as? AppDelegate
+        let ud = UserDefaults.standard
         
-        ad?.paramEmail = self.email.text
-        ad?.paramUpdate = self.isUpdate.isOn
-        ad?.paramInterval = self.interval.value
+        ud.set(self.email.text, forKey: "email")
+        ud.set(self.isUpdate.isOn, forKey: "isUpdate")
+        ud.set(self.interval.value, forKey: "interval")
+        
         
         self.presentingViewController?.dismiss(animated: true)
         }
