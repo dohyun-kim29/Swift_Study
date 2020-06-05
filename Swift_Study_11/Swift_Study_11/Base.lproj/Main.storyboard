@@ -62,7 +62,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Regist"/>
                                 <connections>
-                                    <segue destination="Zl3-O2-AO5" kind="presentation" id="zas-ef-rCs"/>
+                                    <segue destination="Zl3-O2-AO5" kind="presentation" modalPresentationStyle="fullScreen" id="Blp-Xa-wOt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -84,7 +84,7 @@
             <objects>
                 <viewController id="Zl3-O2-AO5" customClass="FormViewController" customModule="Swift_Study_11" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CWU-MB-sK0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gWS-0L-eA3">
