@@ -21,15 +21,20 @@ class ViewController: UIViewController {
     
     @IBAction func alert(_ sender: Any) {
         
-        let alert = UIAlertController(title: "선택", message: "항목을 선택해주세요", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "선택", message: "항목을 선택해주세요", preferredStyle: .alert)
         
-        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        let cancel = UIAlertAction(title: "취소", style: .cancel) { (_) in self.result.text = "취소 버튼을 클릭했습니다"}
         
-        let ok = UIAlertAction(title: "확인", style: .default)
+        let ok = UIAlertAction(title: "확인", style: .default) {(_) in self.result.text = "확인 버튼을 클릭했습니다"}
         
-        let exec = UIAlertAction(title: "실행", style: .destructive)
         
-        let stop = UIAlertAction(title: "중지", style: .default)
+        let exec = UIAlertAction(title: "실행", style: .destructive) {
+            (_) in self.result.text = "실행 버튼을 클릭했습니다"
+        }
+        
+        let stop = UIAlertAction(title: "중지", style: .default) {
+            (_) in self.result.text = "중지 버튼을 클릭했습니다"
+        }
         
         
         alert.addAction(cancel)
