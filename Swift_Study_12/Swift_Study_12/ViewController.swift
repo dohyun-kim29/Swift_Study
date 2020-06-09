@@ -16,5 +16,18 @@ class ViewController: UIViewController {
     }
 
 
+    @IBOutlet weak var result: UILabel!
+    
+    
+    @IBAction func alert(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "선택", message: "항목을 선택해주세요", preferredStyle: .alert)
+        
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        
+        alert.addAction(cancel)
+        
+        self.present(alert, animated: false)
+    }
 }
 
