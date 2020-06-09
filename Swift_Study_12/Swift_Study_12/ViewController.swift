@@ -44,5 +44,35 @@ class ViewController: UIViewController {
         
         self.present(alert, animated: false)
     }
+    
+    @IBAction func login(_ sender: Any) {
+        
+        let title =  "iTunes Store에 로그인"
+        
+        let message = "사용자의 Apple ID rlaehgus1229@gmail.com의 암호를 입력하십시오"
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        
+        let ok = UIAlertAction(title: "확인", style: .default) {(_) in
+            
+            if let tf = alert.textFields?[0] {
+            
+                print("입력된 값은 \(tf.text!) 입니다. ")
+            } else {
+                print("입력된 값이 없습니다.")
+            }
+        }
+        alert.addAction(cancel)
+        alert.addAction(ok)
+        
+        alert.addTextField(configurationHandler: { (tf) in
+            tf.placeholder = "암호"
+            tf.isSecureTextEntry = true
+        })
+        
+        self.present(alert, animated: false)
+    }
 }
 
