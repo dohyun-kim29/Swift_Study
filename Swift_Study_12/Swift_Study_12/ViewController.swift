@@ -74,5 +74,44 @@ class ViewController: UIViewController {
         
         self.present(alert, animated: false)
     }
+    
+    
+    @IBAction func auth(_ sender: Any) {
+        
+        let msg = "로그인"
+        let alert = UIAlertController(title: nil, message: msg, preferredStyle: .alert)
+        
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        
+        let ok = UIAlertAction(title: "확인", style: .default) {  (_) in
+            
+            let loginId = alert.textFields?[0].text
+            let loginpw = alert.textFields?[1].text
+            
+            if loginId == "rlaehgus29" && loginpw == "1234" {
+                self.result.text = "인증되었습니다"
+            } else {
+                self.result.text = "인증에 실패하였습니다"
+            }
+        }
+        
+        alert.addAction(cancel)
+        alert.addAction(ok)
+        
+        alert.addTextField(configurationHandler: {(tf) in
+            tf.placeholder = "아이디"
+            tf.isSecureTextEntry = false
+        })
+        
+        alert.addTextField(configurationHandler: {(tf) in
+            tf.placeholder = "비밀번호"
+            tf.isSecureTextEntry = true
+        })
+        
+        self.present(alert, animated: false)
+    }
+    
+    
+    
 }
 
