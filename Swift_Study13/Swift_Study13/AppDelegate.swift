@@ -28,6 +28,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
+    func applicationWillResignActive(_ application: UIApplication) {
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().getNotificationSettings(completionHandler: { settings in if settings.authorizationStatus == UNAuthorizationStatus.authorized {
+                let nContent = UNMutableNotificationContent()
+                nContent.badge = 1
+                nContent.title = "로컬 알림 메시지"
+                nContent.subtitle = "준비된 내용이 아주 많아요! 얼른 다시 앱을 열어주세요!!"
+                nContent.body = "앗, 왜 나갔어요??? 어서 들어오세요!!"
+                nContent.sound = UNNotificationSound.default
+                nContent.userInfo = ["name" : "홍길동"]
+                
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                
+                let request = UNNotificationRequest(identifier: "wake up", content: nContent, trigger: trigger)
+                
+                UNUserNotificationCenter.current().add(request)
+                
+            } else {
+                print("사용자가 동의하지 않음!!!")
+                }
+            })
+        } else {
+            
+        }
+    }
     
 
     // MARK: UISceneSession Lifecycle
