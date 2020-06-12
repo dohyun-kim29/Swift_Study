@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController {
 
     @IBOutlet weak var imgView: UIImageView!
     
@@ -30,6 +30,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.present(picker, animated: false)
         
     }
+    
+    
+}
+// MARK:- imagepickercontrollerdelegate method
+extension ViewController: UIImagePickerControllerDelegate {
+    
+}
+
+extension ViewController: UINavigationControllerDelegate {
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: false)
@@ -53,5 +62,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             self.imgView.image = img
         }
     }
+    
 }
 
