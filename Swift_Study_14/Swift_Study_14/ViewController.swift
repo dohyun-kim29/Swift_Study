@@ -8,9 +8,39 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var tf: UITextField!
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        print("텍스트 필드의 편집이 시작됩니다.")
+        
+        return true
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        print("텍스트 필드의 내용이 삭제됩니다.")
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        print("텍스트 필드의 내용이 \(string)으로 번경됩니다.")
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        print("텍스트 필드의 리턴키가 눌러졌습니다.")
+        return true
+    }
+    
+    private func textFieldShouldEndEditing(_ textField: UITextField)  {
+        print("텍스트 필드의 편집이 종료되었습니다.")
+        
+    }
+        
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +68,20 @@ class ViewController: UIViewController {
         
         self.tf.layer.borderWidth = 2.0
         
+        self.tf.becomeFirstResponder()
+        
+        self.tf.delegate = self
+        
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func confirm(_ sender: Any) {
+        self.tf.resignFirstResponder()
+    }
+    
+    @IBAction func input(_ sender: Any) {
+        self.tf.becomeFirstResponder()
+    }
     
 }
 
