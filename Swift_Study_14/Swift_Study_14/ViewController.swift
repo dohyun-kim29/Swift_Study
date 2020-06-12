@@ -26,7 +26,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         print("텍스트 필드의 내용이 \(string)으로 번경됩니다.")
-        return true
+        if Int(string) == nil {
+            if (textField.text?.count)! + string.count > 10 {
+                return false
+            } else {
+                return true
+            }
+        } else {
+            return false
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
