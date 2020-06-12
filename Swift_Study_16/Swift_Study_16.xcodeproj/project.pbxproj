@@ -15,6 +15,8 @@
 		47DECF652493609A00EC00F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47DECF632493609A00EC00F8 /* LaunchScreen.storyboard */; };
 		47DECF702493609A00EC00F8 /* Swift_Study_16Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DECF6F2493609A00EC00F8 /* Swift_Study_16Tests.swift */; };
 		47DECF7B2493609A00EC00F8 /* Swift_Study_16UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DECF7A2493609A00EC00F8 /* Swift_Study_16UITests.swift */; };
+		47DECF892493622200EC00F8 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DECF882493622200EC00F8 /* ListViewController.swift */; };
+		47DECF8B249364D300EC00F8 /* MovieVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DECF8A249364D300EC00F8 /* MovieVO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		47DECF762493609A00EC00F8 /* Swift_Study_16UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Swift_Study_16UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47DECF7A2493609A00EC00F8 /* Swift_Study_16UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_Study_16UITests.swift; sourceTree = "<group>"; };
 		47DECF7C2493609A00EC00F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47DECF882493622200EC00F8 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		47DECF8A249364D300EC00F8 /* MovieVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieVO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				47DECF5A2493609800EC00F8 /* SceneDelegate.swift */,
 				47DECF5C2493609800EC00F8 /* ViewController.swift */,
 				47DECF5E2493609800EC00F8 /* Main.storyboard */,
+				47DECF8A249364D300EC00F8 /* MovieVO.swift */,
+				47DECF882493622200EC00F8 /* ListViewController.swift */,
 				47DECF612493609A00EC00F8 /* Assets.xcassets */,
 				47DECF632493609A00EC00F8 /* LaunchScreen.storyboard */,
 				47DECF662493609A00EC00F8 /* Info.plist */,
@@ -261,7 +267,9 @@
 			files = (
 				47DECF5D2493609800EC00F8 /* ViewController.swift in Sources */,
 				47DECF592493609800EC00F8 /* AppDelegate.swift in Sources */,
+				47DECF892493622200EC00F8 /* ListViewController.swift in Sources */,
 				47DECF5B2493609800EC00F8 /* SceneDelegate.swift in Sources */,
+				47DECF8B249364D300EC00F8 /* MovieVO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
