@@ -34,6 +34,32 @@ class ListViewController: UITableViewController {
         
         self.present(alert, animated: false)
         
+        
+        
     }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return self.list.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") ?? UITableViewCell()
+        
+        cell.textLabel?.numberOfLines = 0
+        
+        cell.textLabel?.text = list[indexPath.row]
+        
+        return cell
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.estimatedRowHeight = 50
+        self.tableView.rowHeight = UITableView.automaticDimension
+    }
+    
+    
     
 }
