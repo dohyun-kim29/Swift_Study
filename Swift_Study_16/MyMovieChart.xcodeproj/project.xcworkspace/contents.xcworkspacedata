@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Swift_Study_16.xcodeproj">
+      location = "self:MyMovieChart.xcodeproj">
    </FileRef>
 </Workspace>
