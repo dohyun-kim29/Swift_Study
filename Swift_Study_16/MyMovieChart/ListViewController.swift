@@ -39,15 +39,27 @@ class ListViewController: UITableViewController {
     let row = self.list[indexPath.row]
     // 테이블 셀 객체를 직접 생성하는 대신 큐로부터 가져옴
     let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell")!
-    cell.textLabel?.text = row.title
+   
+    let title = cell.viewWithTag(101) as? UILabel
     
-    // ① 추가사항 : 서브타이틀에 데이터 연결
-    cell.detailTextLabel?.text = row.description
+    let desc = cell.viewWithTag(102) as? UILabel
+    
+    let opendate = cell.viewWithTag(103) as? UILabel
+    
+    let rating = cell.viewWithTag(104) as? UILabel
+    
+    title?.text = row.title
+    desc?.text = row.description
+    opendate?.text = row.opendate
+    rating?.text = "\(row.rating!)"
     
     return cell
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     NSLog("선택된 행은 \(indexPath.row) 번째 행입니다")
+    
   }
+    
+
 }
