@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		47D5A1DB2497642200F03876 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D5A1DA2497642200F03876 /* MovieCell.swift */; };
 		596A7F2F2038740500C4B363 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596A7F2E2038740500C4B363 /* AppDelegate.swift */; };
 		596A7F312038740500C4B363 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596A7F302038740500C4B363 /* ViewController.swift */; };
 		596A7F342038740500C4B363 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 596A7F322038740500C4B363 /* Main.storyboard */; };
@@ -15,10 +14,13 @@
 		596A7F392038740500C4B363 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 596A7F372038740500C4B363 /* LaunchScreen.storyboard */; };
 		596A7F41203885FD00C4B363 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596A7F40203885FD00C4B363 /* ListViewController.swift */; };
 		596A7F4320388B3A00C4B363 /* MovieVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596A7F4220388B3A00C4B363 /* MovieVO.swift */; };
+		596A7F452039307200C4B363 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596A7F442039307200C4B363 /* MovieCell.swift */; };
+		596A7F50203934D200C4B363 /* rain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 596A7F4D203934D200C4B363 /* rain.jpg */; };
+		596A7F51203934D200C4B363 /* secret.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 596A7F4E203934D200C4B363 /* secret.jpg */; };
+		596A7F52203934D200C4B363 /* darknight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 596A7F4F203934D200C4B363 /* darknight.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		47D5A1DA2497642200F03876 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		596A7F2B2038740500C4B363 /* MyMovieChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMovieChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		596A7F2E2038740500C4B363 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		596A7F302038740500C4B363 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +30,10 @@
 		596A7F3A2038740500C4B363 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		596A7F40203885FD00C4B363 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		596A7F4220388B3A00C4B363 /* MovieVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieVO.swift; sourceTree = "<group>"; };
+		596A7F442039307200C4B363 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		596A7F4D203934D200C4B363 /* rain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rain.jpg; sourceTree = "<group>"; };
+		596A7F4E203934D200C4B363 /* secret.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = secret.jpg; sourceTree = "<group>"; };
+		596A7F4F203934D200C4B363 /* darknight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = darknight.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +50,7 @@
 		596A7F222038740500C4B363 = {
 			isa = PBXGroup;
 			children = (
+				596A7F462039344600C4B363 /* Resources */,
 				596A7F2D2038740500C4B363 /* MyMovieChart */,
 				596A7F2C2038740500C4B363 /* Products */,
 			);
@@ -63,7 +70,7 @@
 				596A7F2E2038740500C4B363 /* AppDelegate.swift */,
 				596A7F302038740500C4B363 /* ViewController.swift */,
 				596A7F322038740500C4B363 /* Main.storyboard */,
-				47D5A1DA2497642200F03876 /* MovieCell.swift */,
+				596A7F442039307200C4B363 /* MovieCell.swift */,
 				596A7F4220388B3A00C4B363 /* MovieVO.swift */,
 				596A7F40203885FD00C4B363 /* ListViewController.swift */,
 				596A7F352038740500C4B363 /* Assets.xcassets */,
@@ -71,6 +78,16 @@
 				596A7F3A2038740500C4B363 /* Info.plist */,
 			);
 			path = MyMovieChart;
+			sourceTree = "<group>";
+		};
+		596A7F462039344600C4B363 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				596A7F4F203934D200C4B363 /* darknight.jpg */,
+				596A7F4D203934D200C4B363 /* rain.jpg */,
+				596A7F4E203934D200C4B363 /* secret.jpg */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,9 +149,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				596A7F52203934D200C4B363 /* darknight.jpg in Resources */,
 				596A7F392038740500C4B363 /* LaunchScreen.storyboard in Resources */,
+				596A7F50203934D200C4B363 /* rain.jpg in Resources */,
 				596A7F362038740500C4B363 /* Assets.xcassets in Resources */,
 				596A7F342038740500C4B363 /* Main.storyboard in Resources */,
+				596A7F51203934D200C4B363 /* secret.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +168,7 @@
 				596A7F312038740500C4B363 /* ViewController.swift in Sources */,
 				596A7F4320388B3A00C4B363 /* MovieVO.swift in Sources */,
 				596A7F41203885FD00C4B363 /* ListViewController.swift in Sources */,
-				47D5A1DB2497642200F03876 /* MovieCell.swift in Sources */,
+				596A7F452039307200C4B363 /* MovieCell.swift in Sources */,
 				596A7F2F2038740500C4B363 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
