@@ -30,6 +30,14 @@ class ListViewController: UITableViewController {
                return datalist
            }()
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+       
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.list.count
     }
@@ -39,14 +47,15 @@ class ListViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell")!
         cell.textLabel?.text = row.title
+        
+        cell.detailTextLabel?.text = row.description
+        
         return cell
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-       
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        NSLog("선택된 행은 \(indexPath.row) 번째 행입니다")
     }
+    
     
 }
