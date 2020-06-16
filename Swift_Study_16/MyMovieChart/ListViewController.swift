@@ -66,6 +66,7 @@ class ListViewController: UITableViewController {
         
         let apidata = try! Data(contentsOf: apiURI)
         
-        let log = NSString(data: apidata, encoding: String.Encoding.utf8.rawValue) ?? ""NSLog("API Result=\(log)")
+        let log = NSString(data: apidata, encoding: String.Encoding.utf8.rawValue) ?? ""
+            NSLog("API Result=\(log)")
     }
 }
