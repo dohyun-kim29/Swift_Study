@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47D5A2682498DE6500F03876 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D5A2672498DE6500F03876 /* DetailViewController.swift */; };
 		596A7F2F2038740500C4B363 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596A7F2E2038740500C4B363 /* AppDelegate.swift */; };
 		596A7F312038740500C4B363 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596A7F302038740500C4B363 /* ViewController.swift */; };
 		596A7F342038740500C4B363 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 596A7F322038740500C4B363 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47D5A2672498DE6500F03876 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		596A7F2B2038740500C4B363 /* MyMovieChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMovieChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		596A7F2E2038740500C4B363 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		596A7F302038740500C4B363 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				596A7F2E2038740500C4B363 /* AppDelegate.swift */,
 				596A7F302038740500C4B363 /* ViewController.swift */,
 				596A7F322038740500C4B363 /* Main.storyboard */,
+				47D5A2672498DE6500F03876 /* DetailViewController.swift */,
 				596A7F442039307200C4B363 /* MovieCell.swift */,
 				596A7F4220388B3A00C4B363 /* MovieVO.swift */,
 				596A7F40203885FD00C4B363 /* ListViewController.swift */,
@@ -168,6 +171,7 @@
 				596A7F312038740500C4B363 /* ViewController.swift in Sources */,
 				596A7F4320388B3A00C4B363 /* MovieVO.swift in Sources */,
 				596A7F41203885FD00C4B363 /* ListViewController.swift in Sources */,
+				47D5A2682498DE6500F03876 /* DetailViewController.swift in Sources */,
 				596A7F452039307200C4B363 /* MovieCell.swift in Sources */,
 				596A7F2F2038740500C4B363 /* AppDelegate.swift in Sources */,
 			);
