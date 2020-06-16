@@ -58,4 +58,14 @@ class ListViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     NSLog("선택된 행은 \(indexPath.row) 번째 행입니다")
   }
+    
+    override func viewDidLoad() {
+        let url = "https://swiftapi.rubypaper.co.kr:2029/hoppin/movies?version=1&page=1&count=10&genreId=&order=releasedateasc"
+        
+        let apiURI : URL! = URL(string: url)
+        
+        let apidata = try! Data(contentsOf: apiURI)
+        
+        let log = NSString(data: apidata, encoding: String.Encoding.utf8.rawValue) ?? ""NSLog("API Result=\(log)")
+    }
 }
