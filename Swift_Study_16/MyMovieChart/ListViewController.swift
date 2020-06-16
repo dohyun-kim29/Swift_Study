@@ -39,7 +39,7 @@ class ListViewController: UITableViewController {
   // 영화 차트 API를 호출해주는 메소드
   func callMovieAPI() {
     // ① 호핀 API 호출을 위한 URI를 생성
-    let url = "http://swiftapi.rubypaper.co.kr:2029/hoppin/movies?version=1&page=\(self.page)&count=10&genreId=&order=releasedateasc"
+    let url = "http://swiftapi.rubypaper.co.kr:2029/hoppin/movies?version=1&page=\(self.page)&count=30&genreId=&order=releasedateasc"
     let apiURI : URL! = URL(string: url)
     
     // ② REST API를 호출
@@ -98,6 +98,8 @@ class ListViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     // 주어진 행에 맞는 데이터 소스를 읽어온다.
     let row = self.list[indexPath.row]
+    
+    NSLog("제목:\(row.title!), 호출된 행 번호: \(indexPath.row)")
     
     // ========= 여기부터 내용 변경됨 =========
     let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell") as! MovieCell
