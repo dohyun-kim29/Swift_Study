@@ -73,6 +73,10 @@ class ListViewController: UITableViewController {
         mvo.detail      = r["linkUrl"] as? String
         mvo.rating      = ((r["ratingAverage"] as! NSString).doubleValue)
         
+        let url: URL! = URL(string: mvo.thumbnail!)
+        let imageData = try! Data(contentsOf: url)
+        mvo.thumbnailImage = UIImage(data: imageData)
+        
         // list 배열에 추가
         self.list.append(mvo)
       }
@@ -111,12 +115,12 @@ class ListViewController: UITableViewController {
     cell.rating?.text = "\(row.rating!)"
     
     // 섬네일 경로를 인자값으로 하는 URL 객체를 생성
-    let url: URL! = URL(string: row.thumbnail!)
-    // 이미지를 읽어와 Data 객체에 저장
-    let imageData = try! Data(contentsOf: url)
-    // UIImage 객체를 생성하여 아울렛 변수의 image 속성에 대입
-    cell.thumbnail.image = UIImage(data:imageData)
+    DispatchQueue.main.async(execute: {
+         
+            cell.thumbnail.image = self.getThumbnailImage(indexPath.row)
+        })
     
+
     // ========= 여기까지 내용 변경됨 =========
     
     return cell
@@ -125,4 +129,20 @@ class ListViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     NSLog("선택된 행은 \(indexPath.row) 번째 행입니다")
   }
+    
+    func getThumbnailImage(_ index: Int) -> UIImage {
+        let mvo = self.list[index]
+        
+        if let savedImage = mvo.thumbnailImage {
+            return savedImage
+        } else {
+            let url: URL! = URL(string: mvo.thumbnail!)
+            let imageData = try! Data(contentsOf: url)
+            mvo.thumbnailImage = UIImage(data: imageData)
+            
+            return mvo.thumbnailImage!
+        }
+    }
+
 }
+
