@@ -123,12 +123,18 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="IHR-MW-8xz">
+                                <rect key="frame" x="169" y="296" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="aAb-rs-38U"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="KHZ-cm-010"/>
                     <connections>
+                        <outlet property="spinner" destination="IHR-MW-8xz" id="CCp-uA-zEo"/>
                         <outlet property="wv" destination="T1z-Rp-TGA" id="kkg-qw-1B3"/>
                     </connections>
                 </viewController>

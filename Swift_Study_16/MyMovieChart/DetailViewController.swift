@@ -9,14 +9,19 @@
 import UIKit
 import WebKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, WKNavigationDelegate {
     
 
-    @IBOutlet weak var wv: UIWebView!
+    @IBOutlet weak var wv: WKWebView!
     
     var mvo: MovieVO!
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
+        
+        self.wv.navigationDelegate = self
+        
         NSLog("linkurl = \(self.mvo.detail!), title=\(self.mvo.title!)")
         
         let navibar = self.navigationItem
@@ -47,5 +52,52 @@ class DetailViewController: UIViewController {
         }
         
     }
+extension DetailViewController: WKNavigationDelegate {
+    
+    
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        self.spinner.startAnimating()
+        
+        
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        self.spinner.stopAnimating()
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        self.spinner.stopAnimating()
+        
+        self.spinner.stopAnimating()
+        self.alert("상세 페이지를 읽어오지 못했습니다.") {
+            _ = self.navigationController?.popViewController(animated: true)
+        }
+        
+    }
+    
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        self.spinner.stopAnimating()
+        self.alert("상세 페이지를 읽어오지 못했습니다.") {
+            
+            
+            _ = self.navigationController?.popViewController(animated: true)
+        }
+    }
+      
+}
+
+
+extension UIViewController {
+    func alert(_ message: String, onClick: (() -> Void)? = nil) {
+        
+        let controller = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        controller.addAction(UIAlertAction(title: "OK", style: .cancel) { (_) in onClick?()
+        })
+        
+        DispatchQueue.main.async {
+            self.present(controller, animated: false)
+        }
+    }
+}
     
 
