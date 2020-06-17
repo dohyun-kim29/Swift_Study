@@ -146,3 +146,19 @@ class ListViewController: UITableViewController {
 
 }
 
+extension ListViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segue_detail" {
+            
+            let cell = sender as! MovieCell
+            
+            let path = self.tableView.indexPath(for: cell)
+            
+            let movieinfo = self.list[path!.row]
+            
+            let detailVC = segue.destination as? DetailViewController
+            detailVC?.mvo = movieinfo
+        }
+    }
+}
+

@@ -87,6 +87,7 @@
                                     <outlet property="rating" destination="wgm-DE-EvJ" id="t2B-SW-ftR"/>
                                     <outlet property="thumbnail" destination="Zti-hl-LNW" id="Hpc-tx-fPU"/>
                                     <outlet property="title" destination="c2J-jJ-4n7" id="sED-51-o1q"/>
+                                    <segue destination="1Xs-RK-zHs" kind="show" identifier="segue_detail" id="mrq-Zj-ne4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -105,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="-223.19999999999999" y="-72.413793103448285"/>
         </scene>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="OPy-Ug-LBl">
             <objects>
-                <viewController id="1Xs-RK-zHs" sceneMemberID="viewController">
+                <viewController id="1Xs-RK-zHs" customClass="DetailViewController" customModule="MyMovieChart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gfo-DY-Pzs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,10 +127,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="aAb-rs-38U"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="KHZ-cm-010"/>
+                    <connections>
+                        <outlet property="wv" destination="T1z-Rp-TGA" id="kkg-qw-1B3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Zo-TC-3sQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="480.80000000000001" y="-72.413793103448285"/>
+            <point key="canvasLocation" x="590" y="-72"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tig-mP-d3q">
