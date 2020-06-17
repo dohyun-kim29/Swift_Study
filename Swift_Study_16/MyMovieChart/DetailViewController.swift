@@ -16,7 +16,7 @@ class DetailViewController: UIViewController {
     
     var mvo: MovieVO!
     
-    override func viewDidLoad() {`
+    override func viewDidLoad() {
         NSLog("linkurl = \(self.mvo.detail!), title=\(self.mvo.title!)")
         
         let navibar = self.navigationItem
