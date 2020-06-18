@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class DetailViewController: UIViewController, WKNavigationDelegate {
+class DetailViewController: UIViewController {
     
 
     @IBOutlet weak var wv: WKWebView!
