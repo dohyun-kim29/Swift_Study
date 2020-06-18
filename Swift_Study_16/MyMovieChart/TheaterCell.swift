@@ -2,19 +2,17 @@
 //  TheaterCell.swift
 //  MyMovieChart
 //
-//  Created by DohyunKim on 2020/06/18.
-//  Copyright © 2020 SQLPRO. All rights reserved.
+//  Created by prologue on 2018. 2. 20..
+//  Copyright © 2018년 SQLPRO. All rights reserved.
 //
 
 import UIKit
-class ThearterCell: UITableViewCell {
-    
-    
-    @IBOutlet weak var name: UILabel!
-    
-    
-    @IBOutlet weak var tel: UILabel!
-    
-    @IBOutlet weak var addr: UILabel!
-    
+
+class TheaterCell: UITableViewCell {
+  // 상영관명
+  @IBOutlet var name: UILabel!
+  // 연락처
+  @IBOutlet var tel: UILabel!
+  // 주소
+  @IBOutlet var addr: UILabel!
 }
