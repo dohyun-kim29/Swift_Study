@@ -186,7 +186,6 @@
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="vRA-Mm-6YV"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="cm2-RB-3vL"/>
                     <connections>
