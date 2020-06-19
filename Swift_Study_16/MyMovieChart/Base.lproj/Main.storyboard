@@ -20,9 +20,11 @@
                             <rect key="frame" x="0.0" y="136" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bR-J6-iyz">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bR-J6-iyz">
                                     <rect key="frame" x="168" y="7" width="39" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="39" id="OVK-g5-D4m"/>
+                                    </constraints>
                                     <state key="normal" title="더보기"/>
                                     <connections>
                                         <action selector="more:" destination="X8E-Zr-fyg" eventType="touchUpInside" id="fd4-gf-FiB"/>
@@ -30,6 +32,10 @@
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="2bR-J6-iyz" secondAttribute="bottom" constant="7" id="1gQ-gW-C0H"/>
+                                <constraint firstItem="2bR-J6-iyz" firstAttribute="centerX" secondItem="jgl-W7-nUC" secondAttribute="centerX" id="zgS-ef-fu8"/>
+                            </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ListCell" id="5CR-gf-H2m" customClass="MovieCell" customModule="MyMovieChart" customModuleProvider="target">
@@ -39,16 +45,21 @@
                                     <rect key="frame" x="0.0" y="0.0" width="348" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="영화 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2J-jJ-4n7">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영화 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2J-jJ-4n7">
                                             <rect key="frame" x="77" y="15" width="179" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="BrH-cg-o4Z"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="영화에 대한 내용 설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zf1-sA-5KE">
-                                            <rect key="frame" x="77" y="43" width="179" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영화에 대한 내용 설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zf1-sA-5KE">
+                                            <rect key="frame" x="77" y="43" width="204" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="Bjp-Nd-SaT"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="xhq-Tr-ttJ"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -60,9 +71,12 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="평점" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgm-DE-EvJ">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="평점" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgm-DE-EvJ">
                                             <rect key="frame" x="299" y="43" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="NEa-jd-doD"/>
+                                                <constraint firstAttribute="width" constant="42" id="zep-et-Pl3"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -73,7 +87,20 @@
                                             <color key="backgroundColor" red="0.81656986259999997" green="0.81656986259999997" blue="0.81656986259999997" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="wgm-DE-EvJ" secondAttribute="bottom" constant="16" id="Xon-Df-CAp"/>
+                                        <constraint firstItem="wgm-DE-EvJ" firstAttribute="leading" secondItem="Zf1-sA-5KE" secondAttribute="trailing" constant="18" id="YOg-rY-DdX"/>
+                                        <constraint firstItem="c2J-jJ-4n7" firstAttribute="top" secondItem="I67-YG-Cy0" secondAttribute="topMargin" constant="4" id="hPN-q9-utY"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="c2J-jJ-4n7" secondAttribute="trailing" constant="84" id="kfk-pA-iCR"/>
+                                        <constraint firstItem="c2J-jJ-4n7" firstAttribute="leading" secondItem="I67-YG-Cy0" secondAttribute="leadingMargin" constant="61" id="rKu-2X-XOY"/>
+                                        <constraint firstItem="Zf1-sA-5KE" firstAttribute="top" secondItem="c2J-jJ-4n7" secondAttribute="bottom" constant="7" id="syK-u2-7mS"/>
+                                        <constraint firstItem="Zf1-sA-5KE" firstAttribute="leading" secondItem="I67-YG-Cy0" secondAttribute="leadingMargin" constant="61" id="vlL-wL-M9U"/>
+                                        <constraint firstItem="Zf1-sA-5KE" firstAttribute="leading" secondItem="I67-YG-Cy0" secondAttribute="leadingMargin" constant="61" id="zkI-C1-xxW"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="wgm-DE-EvJ" secondAttribute="trailing" constant="34" id="zEz-9S-fha"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="desc" destination="Zf1-sA-5KE" id="Lxf-16-fG0"/>
                                     <outlet property="opendate" destination="jq0-by-vPZ" id="y28-VS-OSh"/>
@@ -144,14 +171,21 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="연락처" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64h-Op-7KI">
-                                            <rect key="frame" x="232" y="5" width="109" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연락처" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64h-Op-7KI">
+                                            <rect key="frame" x="232" y="19" width="109" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="XsY-Cg-U9V"/>
+                                                <constraint firstAttribute="width" constant="109" id="juv-iJ-CvI"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="64h-Op-7KI" secondAttribute="trailing" constant="7" id="UpZ-lj-LVK"/>
+                                        <constraint firstItem="64h-Op-7KI" firstAttribute="top" secondItem="Q00-1a-XsB" secondAttribute="top" constant="19" id="qyy-U7-fUA"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="addr" destination="NYH-zQ-tzT" id="WnL-NP-vW4"/>
@@ -180,12 +214,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KuW-UY-kHc">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KuW-UY-kHc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KuW-UY-kHc" firstAttribute="top" secondItem="L2x-6f-SVG" secondAttribute="top" id="J2k-GR-UKE"/>
+                            <constraint firstAttribute="bottom" secondItem="KuW-UY-kHc" secondAttribute="bottom" id="NbX-z9-i6h"/>
+                            <constraint firstAttribute="trailing" secondItem="KuW-UY-kHc" secondAttribute="trailing" id="fr9-to-SSa"/>
+                            <constraint firstItem="KuW-UY-kHc" firstAttribute="leading" secondItem="L2x-6f-SVG" secondAttribute="leading" id="nFS-rZ-NGz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="cm2-RB-3vL"/>
                     <connections>
